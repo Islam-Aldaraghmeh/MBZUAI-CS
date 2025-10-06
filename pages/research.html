@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | CS Department | MBZUAI</title>
+    <link rel="icon" href="../images/favicon.jpeg" type="image/png">
+    <link rel="apple-touch-icon" href="../images/favicon.jpeg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    
+    <script src="../js/nexus.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/logo.png" alt="MBZUAI Logo" class="logo-img">
+                    <span class="logo-text">MBZUAI <strong>CS</strong></span>
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="../index.html#news">News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- PAGE HEADER SECTION -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Our Research</h1>
+            <p class="fade-in">Discover our contributions to the foundational theories and practical applications of modern computing.</p>
+        </div>
+    </section>
+    <!-- In /pages/research.html, add this new section right after the page-header -->
+<!-- PUBLICATIONS LISTING -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section__title fade-in">Recent Publications</h2>
+            <!-- In /pages/research.html, replace the old publications-list div -->
+
+        <div class="publications-list fade-in">
+            <!-- Publication 1 with Spotlight -->
+            <article class="publication-entry">
+                <div class="publication-entry__main">
+                    <div class="publication-entry__info">
+                        <h4>A Framework for Robust GPU Management in Real-Time Systems</h4>
+                        <p class="publication-entry__authors">J. Bakita, et al.</p>
+                        <p class="publication-entry__source">Published in RTSS 2023</p>
+                    </div>
+                    <button class="spotlight-toggle" aria-expanded="false" aria-controls="spotlight-content-1">
+                        <span class="icon">+</span> Key Insights
+                    </button>
+                </div>
+                <div class="publication-spotlight" hidden id="spotlight-content-1">
+                    <div class="spotlight-content">
+                        <dl>
+                            <dt>Problem Statement</dt>
+                            <dd>Managing GPU resources for time-critical tasks is challenging, as standard schedulers are not designed for real-time guarantees.</dd>
+                            <dt>Core Contribution</dt>
+                            <dd>Introduced a novel scheduling framework that provides predictable performance for concurrent GPU applications, preventing deadline misses.</dd>
+                            <dt>Potential Impact</dt>
+                            <dd>Enables the use of powerful GPUs in safety-critical domains like autonomous vehicles and medical robotics.</dd>
+                        </dl>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Publication 2 with Spotlight -->
+            <article class="publication-entry">
+                <div class="publication-entry__main">
+                    <div class="publication-entry__info">
+                        <h4>Neural BRDFs: Unlocking New Frontiers in Photorealistic Rendering</h4>
+                        <p class="publication-entry__authors">L. Yan, et al.</p>
+                        <p class="publication-entry__source">Published in SIGGRAPH 2024</p>
+                    </div>
+                    <button class="spotlight-toggle" aria-expanded="false">
+                        <span class="icon">+</span> Key Insights
+                    </button>
+                </div>
+                <div class="publication-spotlight" hidden>
+                    <div class="spotlight-content">
+                        <dl>
+                            <dt>Problem Statement</dt>
+                            <dd>Accurately modeling how light interacts with complex materials is computationally expensive, limiting realism in real-time graphics.</dd>
+                            <dt>Core Contribution</dt>
+                            <dd>Developed a neural network-based model (Neural BRDF) that learns material properties from real-world data and renders them with high fidelity at a fraction of the cost.</dd>
+                            <dt>Potential Impact</dt>
+                            <dd>Revolutionizes real-time rendering in gaming, virtual reality, and digital design by making photorealism more accessible.</dd>
+                        </dl>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Publication 3 (Plain) -->
+            <article class="publication-entry">
+                <div class="publication-entry__main">
+                    <div class="publication-entry__info">
+                        <h4>Calibrating Write Intensity for Next-Generation Non-Volatile Memories</h4>
+                        <p class="publication-entry__authors">C. J. Xue, et al.</p>
+                        <p class="publication-entry__source">Published in LCTES 2013</p>
+                    </div>
+                    <!-- This one has no button, showing it's an optional feature -->
+                </div>
+            </article>
+        </div>
+        </div>
+    </section>
+    <!-- COLLABORATION NEXUS SECTION -->
+    <section id="nexus" class="section">
+        <div class="container">
+            <h2 class="section__title fade-in">Mapping Our Research Landscape</h2>
+            <p class="section__subtitle fade-in">An interactive map of our department's intellectual ecosystem. Click or hover on nodes to explore connections.</p>
+            <div class="nexus-container fade-in">
+                <canvas id="research-graph"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <main>
+
+
+        <!-- !! AI FEATURE: SEMANTIC SEARCH HUB !! -->
+        <section id="semantic-search" class="section section--light">
+            <div class="container">
+                <h2 class="section__title fade-in">Semantic Research Hub</h2>
+                <p class="section__subtitle fade-in">This isn't a simple keyword search. Ask a question about our work to find relevant faculty, publications, and projects.</p>
+                <div class="search-hub fade-in">
+                    <input type="text" id="semantic-search-input" placeholder="e.g., Who works on robust AI hardware?">
+                    <button id="semantic-search-button">Explore</button>
+                </div>
+                <!-- This is the container for our AI-simulated results -->
+                <div id="semantic-search-results" class="search-results-container">
+                    <!-- Dummy results will be injected here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mohamed bin Zayed University of Artificial Intelligence. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AT THE BOTTOM of /pages/research.html, right before </body> -->
+
+    <!-- SCRIPT TAGS - RELIABLE VERSION -->
+
+    <!-- 1. Main animation script for the whole site -->
+    <script src="../js/script.js" defer></script>
+
+    <!-- 2. The Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- 3. Our NEW custom script for the Nexus graph -->
+    <script src="../js/nexus-chart.js" defer></script>
+
+    <!-- 4. The script for the publication spotlight accordion -->
+    <script src="../js/spotlight.js" defer></script>
+
+</body>
+</html>

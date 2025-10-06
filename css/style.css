@@ -1,0 +1,942 @@
+/*
+ * MBZUAI CS Department Website Styles
+ *
+ * This file contains all the styling for the site, organized by section.
+ * It uses a mobile-first approach.
+ */
+
+/* --- 0. Global Styles & Variables --- */
+
+:root {
+    --primary-color: #0281fb;
+    --secondary-color: #445c64;
+    --text-color: #333333;
+    --light-text-color: #ffffff;
+    --bg-color: #ffffff;
+    --light-bg-color: #f7f9fa;
+    --border-color: #e0e0e0;
+    --font-family: 'Inter', sans-serif;
+    --header-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; color: var(--light-text-color); }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.4rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* --- 1. Header & Navigation --- */
+
+.header {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: var(--header-height);
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header__logo a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.header__logo a strong {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.header__nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.header__nav a {
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.header__nav a:hover {
+    color: var(--primary-color);
+}
+
+/* --- 2. Hero Section --- */
+
+.hero {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: var(--header-height);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto 0;
+    opacity: 0.9;
+}
+
+/* --- 3. General Section Styling --- */
+
+.section {
+    padding: 60px 0;
+}
+
+.section--light {
+    background-color: var(--light-bg-color);
+}
+
+.section__title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section__subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #666;
+}
+
+/* --- 4. Research Areas Section --- */
+
+.research-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.research-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.research-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border-color: var(--primary-color);
+}
+
+
+/* --- 5. Faculty Section --- */
+
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.faculty-card {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+}
+
+.faculty-card img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.faculty-card h3 {
+    margin-bottom: 5px;
+}
+
+.faculty-card p {
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+.faculty-card span {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+
+/* --- 6. News Section --- */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+}
+
+.news-card__tag {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+.news-card h3 {
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+.news-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+.news-card__date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: auto;
+}
+
+
+/* --- 7. Footer --- */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* --- 8. Animations & Responsiveness --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    .header__nav { display: none; } /* Simplification for demo */
+    .hero { height: 50vh; }
+}
+
+/* --- 9. Sub-Page Specific Styles --- */
+
+.page-header {
+    background-color: var(--secondary-color);
+    padding: 120px 0 60px 0;
+    color: var(--light-text-color);
+}
+.page-header h1 {
+    font-size: 2.8rem;
+}
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* --- 10. Detailed Faculty Card (People Page) --- */
+
+.faculty-grid-full {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.faculty-card-detailed {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    background-color: var(--light-bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.faculty-card-detailed img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.faculty-card-detailed__info h3 {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+.faculty-card-detailed__title {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 15px;
+}
+.faculty-card-detailed__interest {
+    color: var(--text-color);
+}
+
+/* --- 11. Publications List (Research Page) --- */
+.publications-list {
+    display: grid;
+    gap: 20px;
+}
+.publication-entry {
+    border-left: 3px solid var(--primary-color);
+    padding-left: 20px;
+}
+.publication-entry h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.publication-entry__authors {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 5px;
+}
+.publication-entry__source {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+}
+
+
+/* --- Responsive adjustments for new components --- */
+@media (max-width: 768px) {
+    .faculty-card-detailed {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .faculty-card-detailed img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* --- 12. Polished Semantic Search Hub (AI Feature) --- */
+
+.search-hub {
+    display: flex;
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 50px; /* Fully rounded ends */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures child elements conform to border-radius */
+}
+
+.search-hub:focus-within {
+    box-shadow: 0 5px 20px rgba(2, 129, 251, 0.2);
+    border-color: var(--primary-color);
+}
+
+#semantic-search-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 18px 25px;
+    font-size: 1.1rem;
+    font-family: var(--font-family);
+    background: transparent;
+}
+
+#semantic-search-input::placeholder {
+    color: #999;
+}
+
+#semantic-search-button {
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#semantic-search-button:hover {
+    background-color: #0068d6; /* A slightly darker shade for hover */
+}
+
+/* --- 13. Polished Search Results Styling --- */
+
+.search-results-container {
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none; /* Initially hidden */
+}
+
+.search-results-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+    display: block; /* Becomes visible */
+}
+
+.search-results__header {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.search-results__header strong {
+    color: var(--primary-color);
+}
+
+.result-card {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.result-card__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--light-text-color);
+}
+
+.result-card__icon--person { background-color: var(--primary-color); }
+.result-card__icon--publication { background-color: var(--secondary-color); }
+
+.result-card__content h4 {
+    margin-bottom: 5px;
+}
+
+.result-card__content p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.result-card__tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+/* --- 15. Publication Spotlight (Accordion) --- */
+
+.publication-entry {
+    border-left: none; /* Removing old border */
+    background-color: var(--light-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.publication-entry__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.spotlight-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: var(--font-family);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.spotlight-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+.spotlight-toggle .icon {
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.spotlight-toggle[aria-expanded="true"] .icon {
+    transform: rotate(45deg);
+}
+
+.publication-spotlight {
+    /* The magic for the smooth accordion effect */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.spotlight-content {
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 20px;
+}
+
+.spotlight-content dl {
+    display: grid;
+    gap: 15px;
+}
+
+.spotlight-content dt { /* Term (e.g., Problem Statement) */
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.spotlight-content dd { /* Definition */
+    margin-left: 0;
+    padding-left: 15px;
+    border-left: 2px solid var(--primary-color);
+    color: #555;
+}
+
+/* --- 16. Collaboration Nexus Graph --- */
+.nexus-container {
+    width: 100%;
+    height: 550px; /* A bit more vertical space for clarity */
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Very subtle shadow */
+}
+
+#research-graph {
+    width: 100%;
+    height: 100%;
+    cursor: default; /* Use default cursor for a less "game-like" feel */
+}
+
+/* --- 17. Professional Accessibility --- */
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* --- 18. Dynamic Dossier Builder --- */
+.dossier-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.dossier-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.dossier-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.dossier-content {
+    flex-grow: 1;
+}
+.dossier-content h3 { margin-bottom: 5px; }
+.dossier-content p { margin: 0; color: #666; }
+
+.dossier-action {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+#interest-selector {
+    padding: 10px 15px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+#generate-dossier-btn {
+    padding: 10px 20px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+#generate-dossier-btn:hover {
+    background-color: #0068d6;
+}
+
+/* --- 19. Dossier Modal Styling --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* ADD THIS LINE: The overlay is now "click-through" when hidden */
+}
+.modal-overlay:not([hidden]) {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+.modal-overlay:not([hidden]) .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #aaa;
+    cursor: pointer;
+}
+
+/* Responsive adjustments for Dossier Builder */
+@media (max-width: 992px) {
+    .dossier-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .dossier-action {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* --- 20. Enhanced Research Cards (Homepage) - REFINED UX --- */
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 100px; /* Ensures cards never touch the edges */
+}
+
+.research-card { display: none; } 
+
+.research-card-enhanced {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+}
+
+.research-card-enhanced:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    border-color: var(--primary-color);
+}
+
+.research-card-enhanced h4 {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px; /* Add space between title and details */
+    transition: color 0.3s ease;
+}
+
+.research-card-enhanced:hover h4 {
+    color: var(--primary-color);
+}
+
+.research-card__details p {
+    margin: 0 0 15px 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.research-card__faculty {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Subtle decorative line - no change to this part */
+.research-card-enhanced::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.research-card-enhanced:hover::before {
+    transform: scaleX(1);
+}
+
+/* --- 21. Nexus Integration (Checkmate Move) --- */
+
+.nexus-trigger-btn {
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nexus-trigger-btn:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.modal-content--large {
+    max-width: 900px;
+    width: 90%;
+}
+
+#nexus-modal-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nexus-container-modal {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+/* --- 22. Reusable Button Styles --- */
+
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button--outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.button--outline:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Container to center the button */
+.view-all-container {
+    text-align: center;
+    margin-top: 40px; /* Adds space above the button */
+}
+
+/* --- 23. Faculty Action Bar (Button Version) --- */
+
+.faculty-card-detailed__actions {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* A new generic action button class */
+.action-btn {
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    font-size: 1rem; /* Match the nexus button */
+    line-height: 1.4; /* Ensure consistent height */
+}
+
+.action-btn:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+/* Ensure the nexus button also uses the font-size */
+.nexus-trigger-btn {
+    font-size: 1rem;
+}
+
+/* We no longer need a margin on the single nexus button */
+.nexus-trigger-btn {
+    margin-top: 0;
+}
+
+/* --- 24. Header Logo Image (Corrected) --- */
+
+.logo-link {
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Vertically centers the logo and text */
+    gap: 16px; /* Space between logo and text */
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 50px; /* Control logo size */
+    width: auto;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.logo-text strong {
+    font-weight: 700;
+    color: var(--primary-color);
+}

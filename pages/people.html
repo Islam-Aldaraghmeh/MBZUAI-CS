@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our People | CS Department | MBZUAI</title>
+    <link rel="icon" href="../images/favicon.jpeg" type="image/png">
+    <link rel="apple-touch-icon" href="../images/favicon.jpeg">
+    <!-- Note the updated path to the CSS file -->
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Note the updated path to the JS file -->
+    <script src="../js/script.js" defer></script> 
+    <!-- 2. The Chart.js library (Reliable) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- 3. Our NEW, RELIABLE script for the People Page Nexus -->
+    <script src="../js/people-nexus.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <a href="../index.html" class="logo-link">
+                    <img src="../images/logo.png" alt="MBZUAI Logo" class="logo-img">
+                    <span class="logo-text">MBZUAI <strong>CS</strong></span>
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <!-- Note the updated paths -->
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="people.html">People</a></li> 
+                    <li><a href="../index.html#news">News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE HEADER SECTION -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="fade-in">Our People</h1>
+                <p class="fade-in">Meet the researchers and educators driving the future of computer science.</p>
+            </div>
+        </section>
+
+        <!-- FACULTY LISTING SECTION -->
+        <section id="faculty" class="section">
+            <div class="container">
+                <h2 class="section__title fade-in">Faculty</h2>
+                <div class="faculty-grid-full fade-in">
+                    <!-- In /pages/people.html, replace the content of faculty-grid-full -->
+
+                    <!-- Faculty Card 1 -->
+                    <article class="faculty-card-detailed">
+                        <img src="../images/Abdulrahman-Mahmoud.jpg" alt="Portrait of Abdulrahman Mahmoud">
+                        <div class="faculty-card-detailed__info">
+                            <h3>Abdulrahman Mahmoud</h3>
+                            <p class="faculty-card-detailed__title">Assistant Professor of Computer Science</p>
+                            <p class="faculty-card-detailed__interest"><strong>Research Focus:</strong> Building reliable, high-performance, and intelligent computing systems at the intersection of machine learning and hardware.</p>
+                            <button class="nexus-trigger-btn" data-faculty-id="A. Mahmoud">Visualize Connections</button>
+                            <a href="#" class="action-btn" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                            <a href="#" class="action-btn" target="_blank" rel="noopener noreferrer">Website</a>
+                        </div>
+                    </article>
+
+                    <!-- Faculty Card 2 -->
+                    <article class="faculty-card-detailed">
+                        <img src="../images/Joshua-Bakita.png" alt="Portrait of Joshua Bakita">
+                        <div class="faculty-card-detailed__info">
+                            <h3>Joshua Bakita</h3>
+                            <p class="faculty-card-detailed__title">Assistant Professor of Computer Science</p>
+                            <p class="faculty-card-detailed__interest"><strong>Research Focus:</strong> GPU Scheduling, Real-Time Systems, and Operating Systems, with widely adopted open-source management libraries.</p>
+                            <button class="nexus-trigger-btn" data-faculty-id="J. Bakita">Visualize Connections</button>
+                            <a href="#" class="action-btn" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                            <a href="#" class="action-btn" target="_blank" rel="noopener noreferrer">Website</a>
+                        </div>
+                    </article>
+
+                    <!-- Faculty Card 3 -->
+                    <article class="faculty-card-detailed">
+                        <img src="../images/Chun-Jason.jpg" alt="Portrait of Chun Jason Xue">
+                        <div class="faculty-card-detailed__info">
+                            <h3>Chun Jason Xue</h3>
+                            <p class="faculty-card-detailed__title">Professor of Computer Science</p>
+                            <p class="faculty-card-detailed__interest"><strong>Research Focus:</strong> Storage and systems, high-performance designs for AI, and pioneering work in Non-Volatile Memories (NVMs).</p>
+                            <button class="nexus-trigger-btn" data-faculty-id="C. J. Xue">Visualize Connections</button>
+                            <a href="#" class="action-btn" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                            <a href="#" class="action-btn" target="_blank" rel="noopener noreferrer">Website</a>
+                        </div>
+                    </article>
+
+                    <!-- Faculty Card 4 -->
+                    <article class="faculty-card-detailed">
+                        <img src="../images/David-Basin.jpg" alt="Portrait of David Basin">
+                        <div class="faculty-card-detailed__info">
+                            <h3>David Basin</h3>
+                            <p class="faculty-card-detailed__title">Affiliated Professor of Computer Science</p>
+                            <p class="faculty-card-detailed__interest"><strong>Research Focus:</strong> Information Security, with an emphasis on modeling, building, and validating secure and reliable systems.</p>
+                            <button class="nexus-trigger-btn" data-faculty-id="D. Basin">Visualize Connections</button>
+                            <a href="#" class="action-btn" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                            <a href="#" class="action-btn" target="_blank" rel="noopener noreferrer">Website</a>
+                        </div>
+                    </article>
+
+                    <!-- Faculty Card 5 -->
+                    <article class="faculty-card-detailed">
+                        <img src="https://placehold.co/250x250/0281fb/ffffff?text=LY" alt="Portrait of Lingqi Yan">
+                        <div class="faculty-card-detailed__info">
+                            <h3>Lingqi Yan</h3>
+                            <p class="faculty-card-detailed__title">Associate Professor of Computer Science</p>
+                            <p class="faculty-card-detailed__interest"><strong>Research Focus:</strong> Photorealistic Computer Graphics, combining mathematics, physics, and neural-aided rendering techniques.</p>
+                            <button class="nexus-trigger-btn" data-faculty-id="L. Yan">Visualize Connections</button>
+                            <a href="#" class="action-btn" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                            <a href="#" class="action-btn" target="_blank" rel="noopener noreferrer">Website</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mohamed bin Zayed University of Artificial Intelligence. All rights reserved.</p>
+        </div>
+        <!-- In /pages/people.html, before the </footer> -->
+        <div id="nexus-modal" class="modal-overlay" hidden>
+            <div class="modal-content modal-content--large">
+                <button class="modal-close nexus-modal-close">&times;</button>
+                <h3 id="nexus-modal-title"></h3>
+                <div class="nexus-container-modal">
+                    <canvas id="nexus-graph-modal"></canvas>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

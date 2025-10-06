@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Department | MBZUAI</title>
+    <link rel="icon" href="images/favicon.jpeg" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicon.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+    <script src="js/dossier.js" defer></script>
+    
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__logo">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="MBZUAI Logo" class="logo-img">
+                    <span class="logo-text">MBZUAI <strong>CS</strong></span>
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="pages/research.html">Research</a></li>
+                    <li><a href="pages/people.html">People</a></li>
+                    <li><a href="#news">News</a></li>
+                    <!-- We will build these pages later -->
+                    <!-- <li><a href="/pages/academics.html">Academics</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        <main>
+        <!-- HERO SECTION (No Change) -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="fade-in">Pioneering the Future of Computing</h1>
+                <p class="fade-in">The Computer Science Department at MBZUAI is at the forefront of research and innovation, building the intelligent systems that will shape our world.</p>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION (Now correctly positioned first) -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section__title fade-in">Where AI Meets Foundational Computer Science</h2>
+                <p class="section__subtitle fade-in">We are a unique department dedicated to exploring the symbiosis between core computing principles and the artificial intelligence revolution. Our research in systems, security, and graphics provides the essential bedrock for building the next generation of AI.</p>
+            </div>
+        </section>
+
+        <!-- RESEARCH AREAS SECTION (Maintains the alternating background) -->
+        <section id="research" class="section section--light">
+            <div class="research-grid fade-in">
+                <!-- Card 1: Systems for AI/ML -->
+                <article class="research-card-enhanced">
+                    <div class="research-card__content">
+                        <h4>Systems for AI/ML</h4>
+                        <div class="research-card__details">
+                            <p>Building the high-performance, reliable software and hardware foundations for the next generation of AI.</p>
+                            <span class="research-card__faculty">Key Faculty: A. Mahmoud, C. J. Xue</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Computer Graphics & Vision -->
+                <article class="research-card-enhanced">
+                    <div class="research-card__content">
+                        <h4>Computer Graphics & Vision</h4>
+                        <div class="research-card__details">
+                            <p>Fusing physics and AI to create photorealistic visuals and enable machines to understand the visual world.</p>
+                            <span class="research-card__faculty">Key Faculty: L. Yan</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Information Security & Privacy -->
+                <article class="research-card-enhanced">
+                    <div class="research-card__content">
+                        <h4>Information Security & Privacy</h4>
+                        <div class="research-card__details">
+                            <p>Developing provably secure systems to protect critical information in an increasingly connected world.</p>
+                            <span class="research-card__faculty">Key Faculty: D. Basin</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4: High-Performance Computing -->
+                <article class="research-card-enhanced">
+                    <div class="research-card__content">
+                        <h4>High-Performance Computing</h4>
+                        <div class="research-card__details">
+                            <p>Designing and optimizing systems, from GPU scheduling to memory, that unlock unprecedented computational power.</p>
+                            <span class="research-card__faculty">Key Faculty: J. Bakita, A. Mahmoud</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- PEOPLE SECTION (No Change) -->
+        <section id="people" class="section">
+            <div class="container">
+                <h2 class="section__title fade-in">Meet Our Faculty</h2>
+                <div class="faculty-grid fade-in">
+                    <!-- Faculty Cards remain unchanged -->
+                    <article class="faculty-card">
+                        <img src="images/Abdulrahman-Mahmoud.jpg" alt="Portrait of Abdulrahman Mahmoud">
+                        <h3>Abdulrahman Mahmoud</h3>
+                        <p>Assistant Professor</p>
+                        <span>Systems & Machine Learning</span>
+                    </article>
+                    <article class="faculty-card">
+                        <img src="images/Joshua-Bakita.png" alt="Portrait of Joshua Bakita">
+                        <h3>Joshua Bakita</h3>
+                        <p>Assistant Professor</p>
+                        <span>GPU Scheduling & Real-Time Systems</span>
+                    </article>
+                    <article class="faculty-card">
+                        <img src="images/Chun-Jason.jpg" alt="Portrait of Chun Jason Xue">
+                        <h3>Chun Jason Xue</h3>
+                        <p>Professor</p>
+                        <span>Storage Systems & NVM</span>
+                    </article>
+                    <article class="faculty-card">
+                        <img src="images/David-Basin.jpg" alt="Portrait of David Basin">
+                        <h3>David Basin</h3>
+                        <p>Affiliated Professor</p>
+                        <span>Information Security</span>
+                    </article>
+                    <!--
+                    <article class="faculty-card">
+                        <img src="https://placehold.co/200x200/0281fb/ffffff?text=LY" alt="Portrait of Lingqi Yan">
+                        <h3>Lingqi Yan</h3>
+                        <p>Associate Professor</p>
+                        <span>Computer Graphics</span>
+                    </article>
+                    -->
+                </div>
+                <!-- ADD THIS NEW BLOCK RIGHT HERE -->
+                <div class="view-all-container fade-in">
+                    <a href="pages/people.html" class="button button--outline">View All Faculty</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWS SECTION (No Change) -->
+        <section id="news" class="section section--light">
+            <div class="container">
+                <h2 class="section__title fade-in">Latest News & Events</h2>
+                <div class="news-grid fade-in">
+                    <!-- News Cards remain unchanged -->
+                    <article class="news-card">
+                        <div class="news-card__tag">Collaboration</div>
+                        <h3>MBZUAI and MIT Launch Major AI Research Collaboration</h3>
+                        <p>A landmark partnership to advance fundamental AI research.</p>
+                        <span class="news-card__date">October 26, 2024</span>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-card__tag">Community</div>
+                        <h3>Faculty Excellence Awards and Community Recognition</h3>
+                        <p>Celebrating the outstanding achievements of our faculty and staff.</p>
+                        <span class="news-card__date">October 15, 2024</span>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-card__tag">Academics</div>
+                        <h3>Launch of Specialized Computer Science Programs</h3>
+                        <p>New programs designed to train leaders in high-performance computing and security.</p>
+                        <span class="news-card__date">September 30, 2024</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- DYNAMIC DOSSIER BUILDER (NEW POSITION & NARRATIVE) -->
+        <section id="dossier" class="section"> <!-- NOTE: class is now "section", not "section--light" -->
+            <div class="container dossier-container fade-in">
+                <div class="dossier-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10v6M17 10V4H7v6M12 10v12M12 22l-4-4M12 22l4-4M5 16H2M19 16h3"/></svg>
+                </div>
+                <div class="dossier-content">
+                    <!-- UPDATED HEADLINE -->
+                    <h3>Ready to Dive Deeper?</h3>
+                    <p>Let's build your personalized dossier of relevant faculty, publications, and projects to start your exploration at MBZUAI.</p>
+                </div>
+                <div class="dossier-action">
+                    <select id="interest-selector">
+                        <option value="" disabled selected>Select your interest...</option>
+                        <option value="hardware">AI Hardware & Systems</option>
+                        <option value="graphics">Computer Graphics & Vision</option>
+                        <option value="security">Information Security</option>
+                    </select>
+                    <button id="generate-dossier-btn">Generate Dossier</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <div id="dossier-modal" class="modal-overlay" hidden>
+        <div class="modal-content">
+            <button id="close-dossier-btn" class="modal-close">&times;</button>
+            <div id="dossier-results"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mohamed bin Zayed University of Artificial Intelligence. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
